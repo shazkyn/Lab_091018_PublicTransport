@@ -32,4 +32,9 @@ public class Bus {
     public void removePassenger() {
         passengers.remove(0);
     }
+
+    public void pickupFromStop(BusStop busStop) {
+        Person passenger = busStop.removePersonFromQueue();
+        addPassenger(passenger);
+    }
 }
